@@ -1,3 +1,8 @@
 import React from "react"
 
-export default () => <div>Hello world!</div>
+export default function Home() {
+    return (
+        <div style={{color: `purple`, fontSize: `72px`}}>Covid 19 Website</div>
+    )
+
+}
