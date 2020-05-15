@@ -208,12 +208,15 @@ const IndexPage = () => {
       </div>
 
       <Container type="content" className="text-center home-start">
-        <h2>Still Getting Started?</h2>
-        <p>Run the following in your terminal!</p>
-        <pre>
-          <code>gatsby new [directory] https://github.com/colbyfayock/gatsby-starter-leaflet</code>
-        </pre>
-        <p className="note">Note: Gatsby CLI required globally for the above command</p>
+        <h1>Stay subscribed to our weekly e-newsletter!</h1>
+        <h2> Get the latest COVID-19 updates, mask tutorials, and local e-newsletter
+          according to your state and/or city.
+        </h2>
+        <form id="email-sub-form" action="#">
+          <input type="email" id="subEmail" name="subEmail" />
+          <br />
+          <button type="submit">Subscribe</button>
+        </form>
       </Container>
     </Layout>
   );
