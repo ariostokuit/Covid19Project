@@ -1,4 +1,4 @@
-<b>First Step: <b> <br>
+###Steps to run our code:###
   
 ## Install Gatsby on your own computer with this command<br>
 npm install -g gatsby-cli <br>
