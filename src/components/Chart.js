@@ -16,6 +16,7 @@ const state = {
     ]
   }
 
+<<<<<<< Updated upstream
   // const state = {
   //   labels: ['January', 'February', 'March',
   //            'April', 'May'],
@@ -31,6 +32,8 @@ const state = {
   
 
 
+=======
+>>>>>>> Stashed changes
 class Chart extends Component{
     constructor(props){
         super(props);
@@ -54,6 +57,7 @@ class Chart extends Component{
   render(){
     return (
       <div>
+<<<<<<< Updated upstream
           {/* <ul className="list-group col-xs-6">
               <li style={{backgroundColor: "red", width: "300px", listStyle:"none "}}>Number of deaths per continents</li>
 
@@ -80,6 +84,9 @@ class Chart extends Component{
 
           </ul> */}
 
+=======
+         
+>>>>>>> Stashed changes
         <Bar
           data={state}
           options={{

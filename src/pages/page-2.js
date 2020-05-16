@@ -7,6 +7,12 @@ import Chart from 'components/Chart';
 import State from 'components/State';
 import Continent from 'components/Continent';
 import Country from 'components/Country';
+<<<<<<< Updated upstream
+=======
+import BarCont from 'components/BarCont';
+import BarCou from 'components/BarCou';
+import BarState from 'components/BarState';
+>>>>>>> Stashed changes
 
 const SecondPage = () => {
   return (
@@ -20,6 +26,7 @@ const SecondPage = () => {
       <Container type="content" className="text-center">
         <h1>Page Two</h1>
         <p>Welcome to page 2</p>
+<<<<<<< Updated upstream
         <div className="container">
           <div className="row">
             <div className="col">
@@ -30,6 +37,10 @@ const SecondPage = () => {
             </div>
           </div>
         </div>
+=======
+        <State />
+        <BarState />
+>>>>>>> Stashed changes
       </Container>
     </Layout>
   );
