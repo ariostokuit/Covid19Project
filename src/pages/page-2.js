@@ -20,8 +20,9 @@ const SecondPage = () => {
   });
 
   function makeChart(mainData, chartName) {
-    var yAxesLabels = mainData.map(function(d) {return d.state}); // country name
-    var chartData = mainData.map(function(d) {return d.cases}); // cases of each country
+    var yAxesLabels = mainData.map(function(d) {return d.state});
+    var chartData = mainData.map(function(d) {return d.cases});
+    var color = mainData.map(function (d) {return '#7b42f5'});
     var chart = new Chart(chartName, {
       height: 5000,
       type: 'horizontalBar',
@@ -43,7 +44,8 @@ const SecondPage = () => {
         labels: yAxesLabels,
         datasets: [
           {
-            data: chartData
+            data: chartData,
+            backgroundColor: color
           }
         ]
       }
@@ -51,12 +53,13 @@ const SecondPage = () => {
   }
 
   function makeChart2(mainData, chartName) {
+    var color = mainData.map(function (d) {return '#f5a742'});
     var chartData = mainData.map(function(d) {
        return d.timeline.cases;
     });
     console.log(chartData[29]);
     var or = chartData[29];
-    console.log(or["4/20/20"]);
+    console.log(Object.keys(or));
 
     var chart = new Chart(chartName, {
       height: 5000,
@@ -69,9 +72,11 @@ const SecondPage = () => {
         }
       },
       data: {
+        labels: Object.keys(or),
         datasets: [
           {
-            data: chartData
+            data: Object.values(or),
+            backgroundColor: color
           }
         ]
       }
@@ -94,7 +99,7 @@ const SecondPage = () => {
       <br />
 
       <div id="chartTitle">
-        <h1>Number of Total Cases per U.S. State/Territory</h1>
+        <h1>Orange County Total Cases in Last 30 Days</h1>
       </div>
       <canvas id="chart2"></canvas>
       <br />

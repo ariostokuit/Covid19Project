@@ -11,7 +11,7 @@ function datas(props) {
       datasets: [
         {
         label: 'Deaths',
-        backgroundColor: 'rgba(255, 159, 64, 0.6)',
+        backgroundColor: 'rgba(44, 222, 98, 0.6)',
         borderWidth: 10,
         data: caseData
         }
