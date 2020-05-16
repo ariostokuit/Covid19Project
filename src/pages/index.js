@@ -173,7 +173,7 @@ const IndexPage = () => {
   return (
     <Layout pageName="home">
       <Helmet>
-        <title>Covid 19 Website</title>
+        <title>Covid-19 Tracker</title>
       </Helmet>
 
       <div className="tracker">
