@@ -170,6 +170,17 @@ const IndexPage = () => {
     mapEffect
   };
 
+  const emailForm = document.querySelector('#email-sub-form');
+  if (emailForm){
+    emailForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (emailForm.subEmail.value){
+        console.log(emailForm.subEmail.value + " has subscribed!");
+      }
+      emailForm.reset();
+    });
+  }
+  
   return (
     <Layout pageName="home">
       <Helmet>
@@ -212,7 +223,7 @@ const IndexPage = () => {
         <h2> Get the latest COVID-19 updates, mask tutorials, and local e-newsletter
           according to your state and/or city.
         </h2>
-        <form id="email-sub-form" action="#">
+        <form id="email-sub-form">
           <input type="email" id="subEmail" name="subEmail" />
           <br />
           <button type="submit">Subscribe</button>
