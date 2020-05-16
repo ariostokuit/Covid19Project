@@ -48,11 +48,14 @@ const SecondPage = () => {
 
   return (
     <Layout pageName="two">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" 
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" 
+    crossorigin="anonymous"></link>
       <Helmet>
         <title>Graphs</title>
       </Helmet>
       <div id="chartTitle">
-        <h1>Number of total cases; according to state </h1>
+        <h1>Number of Total Cases per U.S. State/Territory</h1>
       </div>
       <canvas id="chart"></canvas>
       <br />
