@@ -8,7 +8,7 @@ npm install axios <br>
 npm install chart.js <br>
 ## Install react-chartjs-2 on your computer with this command<br>
 npm install react-chartjs-2 <br>
-## install the starter code on your computer<br>
+## Install the starter code on your computer (we based our code on this tutorial)<br>
 gatsby new my-coronavirus-map https://github.com/colbyfayock/gatsby-starter-leaflet <br>
 ## Delete the src folder on your computer and replace it with our src folder <br>
 ## Go into the project folder using terminal and run the project by typing this command
