@@ -11,7 +11,7 @@ function datas(props) {
       datasets: [
         {
         label: 'Deaths',
-        backgroundColor: 'rgba(44, 222, 98, 0.6)',
+        backgroundColor: 'rgba(255, 143, 130, 0.6)',
         borderWidth: 10,
         data: caseData
         }
@@ -47,12 +47,12 @@ class BarCou extends Component{
           data={datas(this.state.cou)}
           options={{
             title:{
-              display:true,
-              text:'Number of deaths per Continent',
+              display:false,
+              text:'Number of deaths per Country',
               fontSize:20
             },
             legend:{
-              display:true,
+              display:false,
               position:'right'
             }
           }}

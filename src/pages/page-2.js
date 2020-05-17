@@ -148,6 +148,18 @@ const SecondPage = () => {
       <Helmet>
         <title>Graphs</title>
       </Helmet>
+      
+      <div id="chartTitle">
+        <h1>Number of Orange County Total Cases in Last 30 Days</h1>
+      </div>
+      <canvas id="chart2"></canvas>
+      <br />
+
+      <div id="chartTitle">
+        <h1>Number of Today's Cases per California County</h1>
+      </div>
+      <canvas id="chart3"></canvas>
+      <br />
 
       <div id="chartTitle">
         <h1>Number of Total Cases per U.S. State/Territory</h1>
@@ -162,17 +174,11 @@ const SecondPage = () => {
       <br />
 
       <div id="chartTitle">
-        <h1>Orange County Total Cases in Last 30 Days</h1>
+        <h1>Number of Total Deaths per Country</h1>
       </div>
-      <canvas id="chart2"></canvas>
+      <BarCou />
       <br />
-
-      <div id="chartTitle">
-        <h1>Today's Cases per California County</h1>
-      </div>
-      <canvas id="chart3"></canvas>
-      <br />
-
+      
       <div id="chartTitle">
         <h1>Number of Total Deaths per Continent</h1>
       </div>
