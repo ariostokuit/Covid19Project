@@ -5,20 +5,20 @@ function comma(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 }
 
-class State extends Component{
+class Countie extends Component{
     constructor(props){
         super(props);
         this.state = {
-            states: []
+            conts: []
         }
     }
 
     // fetch data here
     componentDidMount() {
-        axios.get('https://disease.sh/v2/states?sort=deaths') // <-- sort here
+        axios.get('https://disease.sh/v2/historical/usacounties/california?lastdays=1') // <-- sort here
         .then(res => {
-            const states = res.data;
-            this.setState({ states });
+            const conts = res.data;
+            this.setState({ conts });
         })
         .catch(err =>{
             console.log("Error getting data", err)
@@ -28,24 +28,20 @@ class State extends Component{
 render(){
     return (
     <div className="container">
-        <h2>Number of deaths per U.S. State</h2>
-        <p>Sorted by Deaths</p>
+        <h2>Number of Deaths In Orange Countie</h2>
         <table className="table table-condensed">
             <thead>
                 <tr>
-                <th>State</th>
-                <th>Cases</th>
-                <th>Deaths</th>
-                <th>Tests</th>
+                <th>state</th>
+                <th>county</th>
+                <th>time</th>
                 </tr>
             </thead>
             <tbody>
-            {this.state.states.map(state => 
+            {this.state.conts.map(cont => 
                 <tr>
-                    <td>{state.state}</td>
-                    <td>{comma(state.cases)}</td>
-                    <td style={{backgroundColor:"#ff3333"}}>{comma(state.deaths)}</td>
-                    <td>{comma(state.tests)}</td>
+                    <td>{cont.province}</td>
+                    <td>{cont.county}</td>
                 </tr>
             )}
             </tbody>
@@ -54,4 +50,4 @@ render(){
     )
   }
 }
-export default State;
+export default Countie;
