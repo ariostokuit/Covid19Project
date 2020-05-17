@@ -29,6 +29,7 @@ const FourthPage = () => {
           </div>
           <br />
           <State />
+          <Continent />
         </Container>
       </Layout>
     );

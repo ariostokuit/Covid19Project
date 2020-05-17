@@ -3,10 +3,17 @@ import Helmet from 'react-helmet';
 
 import Layout from 'components/Layout';
 import Container from 'components/Container';
+import BarState from 'components/BarState';
+import State from 'components/State';
+import Continent from 'components/Continent';
+import Country from 'components/Country';
+import Countie from 'components/Countie';
+import BarCont from 'components/BarCont';
+import BarCou from 'components/BarCou';
+
 import { render } from 'enzyme';
 import Chart from 'chart.js';
 import axios from 'axios';
-import BarState from 'components/BarState';
 
 
 const SecondPage = () => {
@@ -164,6 +171,12 @@ const SecondPage = () => {
         <h1>Today's Cases per California County</h1>
       </div>
       <canvas id="chart3"></canvas>
+      <br />
+
+      <div id="chartTitle">
+        <h1>Number of Total Deaths per Continent</h1>
+      </div>
+      <BarCont />
       <br />
 
     </Layout>

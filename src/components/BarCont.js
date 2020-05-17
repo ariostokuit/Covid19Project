@@ -47,12 +47,12 @@ class BarCont extends Component{
           data={datas(this.state.cont)}
           options={{
             title:{
-              display:true,
+              display:false,
               text:'Number of deaths per Continent',
               fontSize:10
             },
             legend:{
-              display:true,
+              display:false,
               position:'right'
             }
           }}
