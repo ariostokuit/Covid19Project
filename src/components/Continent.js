@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
+function comma(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+}
+
 class Continent extends Component{
     constructor(props){
         super(props);
@@ -24,16 +28,19 @@ class Continent extends Component{
 render(){
     return (
     <div className="container">
-        <h2>Number of deaths per Continent</h2>
+        <h2>Number of Deaths Per Continent</h2>
         <p>Sorted by Deaths</p>
         <table className="table table-condensed">
             <thead>
                 <tr>
                 <th>Continent</th>
                 <th>Cases</th>
-                <th>Today's Cases</th>
+                <th>% of Pop. Infected <br />(Cases/Pop.)*100</th>
+                <th>% of Death<br />(Death/Cases)*100</th>
+                <th>% of Death<br />(Death/Pop.)*100</th>
+                <th>% of Recover<br />(Recover/Case)*100</th>
                 <th>Deaths</th>
-                <th>Today's Deaths</th>
+                <th>Population</th>
                 <th>Tests</th>
                 </tr>
             </thead>
@@ -41,11 +48,14 @@ render(){
             {this.state.conts.map(cont => 
                 <tr>
                     <td>{cont.continent}</td>
-                    <td>{cont.cases}</td>
-                    <td>{cont.todayCases}</td>
-                    <td>{cont.deaths}</td>
-                    <td>{cont.todayDeaths}</td>
-                    <td>{cont.tests}</td>
+                    <td>{comma(cont.cases)}</td>
+                    <td>{"~" + ((cont.cases/cont.population)*100).toFixed(2) + "%"}</td>
+                    <td>{"~" + ((cont.deaths/cont.cases)*100).toFixed(2) + "%"}</td>
+                    <td>{"~" + ((cont.deaths/cont.population)*100).toFixed(2) + "%"}</td>
+                    <td>{"~" + ((cont.recovered/(cont.cases))*100).toFixed(2) + "%"}</td>
+                    <td style={{backgroundColor:"#ff3333"}}>{comma(cont.deaths)}</td>
+                    <td>{comma(cont.population)}</td>
+                    <td>{comma(cont.tests)}</td>
                 </tr>
             )}
             </tbody>

@@ -16,21 +16,6 @@ const state = {
     ]
   }
 
-  // const state = {
-  //   labels: ['January', 'February', 'March',
-  //            'April', 'May'],
-  //   datasets: [
-  //     {
-  //       label: 'Deaths',
-  //       backgroundColor: 'red',
-  //       borderWidth: 2,
-  //       data: this.state.countrys
-  //     }
-  //   ]
-  // }
-  
-
-
 class Chart extends Component{
     constructor(props){
         super(props);
@@ -54,32 +39,7 @@ class Chart extends Component{
   render(){
     return (
       <div>
-          {/* <ul className="list-group col-xs-6">
-              <li style={{backgroundColor: "red", width: "300px", listStyle:"none "}}>Number of deaths per continents</li>
-
-            { this.state.countrys.map(country => 
-              <li style={{width: "300px"}}className="list-group-item d-flex justify-content-between align-items-center">
-              {country.continent} <span className="badge badge-primary badge-pill">{country.deaths}</span></li>) }
-          </ul> */}
-
-{/* <ul className="list-group">
-              <li style={{backgroundColor: "red", width: "300px", listStyle:"none "}}>Number of deaths per U.S state</li>
-
-    { this.state.countrys.map(country => 
-      <li style={{width: "300px"}}className="list-group-item d-flex justify-content-between align-items-center">
-      {country.state} <span className="badge badge-primary badge-pill">{country.date} {country.deaths}</span></li>) }
-
-          </ul> */}
-
-{/* <ul className="list-group">
-              <li style={{backgroundColor: "red", width: "300px", listStyle:"none "}}>Number of deaths per county</li>
-
-    { this.state.countrys.map(country => 
-      <li style={{width: "300px"}}className="list-group-item d-flex justify-content-between align-items-center">
-      {country.continent} <span className="badge badge-primary badge-pill">{country.active}</span></li>) }
-
-          </ul> */}
-
+         
         <Bar
           data={state}
           options={{
